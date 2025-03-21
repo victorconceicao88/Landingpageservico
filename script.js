@@ -42,3 +42,30 @@ document.querySelector('form').addEventListener('submit', function(event) {
     loadingIndicator.style.display = 'none'; // Esconde a mensagem "Enviando..."
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Definindo o texto completo
+  const fullText = "Oferecemos serviços de extrema qualidade a preços acessíveis, especialmente para quem está a começar e deseja colocar o seu negócio nas alturas. Utilizamos técnicas avançadas para melhorar a visibilidade online do seu negócio, garantindo que mais pessoas encontrem os seus produtos ou serviços quando procuram na internet. Ajudamos o seu negócio a crescer e a destacar-se no mercado, sem grandes investimentos.";
+
+  const shortTextElement = document.getElementById("short-text");
+  const loadMoreButton = document.getElementById("loadMore");
+
+  // Mostra o botão "Leia mais" quando a seção estiver visível
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadMoreButton.style.display = 'inline-block'; // Torna o botão "Leia mais" visível
+      }
+    });
+  });
+
+  // Observando o elemento com o texto
+  observer.observe(shortTextElement);
+
+  // Evento de clique no botão "Leia mais"
+  loadMoreButton.addEventListener('click', () => {
+    shortTextElement.textContent = fullText; // Substitui o texto curto pelo completo
+    loadMoreButton.style.display = 'none'; // Esconde o botão após mostrar o texto completo
+  });
+});
+
