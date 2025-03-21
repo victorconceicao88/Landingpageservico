@@ -54,42 +54,45 @@
     color: white;
     padding: 100px 0;
     text-align: center;
+    font-size: 28px;
   }
     
-  .hero h1 {
-    margin-right: 35px;
-    font-size: 40px;
+  .hero p {
+    font-size: 15px;
+    margin-bottom: 30px; /* Adiciona espaçamento entre o parágrafo e o botão */
   }
-
+  
   .cta-button {
-    background-color: var(--laranja); /* Laranja */
-    color: white;
-    padding: 15px 30px; /* Aumentamos o padding para mais espaço interno */
-    text-decoration: none; /* Remover o sublinhado padrão do link */
+    background-color: #FFD700; /* Cor dourada para se destacar no fundo escuro */
+    color: #1c1c1c; /* Cor de texto escura para garantir contraste e legibilidade */
+    padding: 15px 30px;
     border-radius: 5px;
+    text-decoration: none;
     font-size: 18px;
-    cursor: pointer;
-    display: inline-block; /* Tornando o link em um bloco para aceitar margens e padding */
-    width: auto; /* Largura automática para o botão se ajustar ao conteúdo */
-    max-width: 250px; /* Tamanho máximo de largura para o botão */
-    margin: 20px auto; /* Espaçamento superior e inferior, e centralização */
-    text-align: center; /* Garantir que o texto fique centralizado */
-    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra para destacar */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transições suaves */
   }
   
   .cta-button:hover {
-    background-color: #e67e22; /* Um tom de laranja mais escuro para hover */
+    background-color: #FFC107; /* Cor um pouco mais clara para o efeito de hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
   }
+  
+  
   
     
   /* Descrição dos Serviços */
   .services-description {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--azul-suave); /* Azul suave */
+    color: #f8f8f8;  /* Cor de texto mais clara para melhorar o contraste */
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
+  
   
   /* Botão CTA */
   .cta-button {
@@ -314,12 +317,15 @@
     display: block;
     width: 200px;
     margin: 0 auto;
-    transition: background-color 0.3s;
-  }
-  
-  button.submit-btn:hover {
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição para cor, transformação e sombra */
+}
+
+button.submit-btn:hover {
     background-color: #e37b2e; /* Escurece o laranja */
-  }
+    transform: translateY(-3px); /* Levanta o botão */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para dar sensação de elevação */
+}
+
 
   
   input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
@@ -344,14 +350,61 @@
     padding: 10px;
   }
 
-  .success-bar {
-    display: none; /* Inicialmente escondido */
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-  }
+    /* Estilo para a barra de sucesso */
+    #success-bar {
+      display: none; /* Inicialmente invisível */
+      width: 100%; /* Barra de sucesso ocupa toda a largura */
+      padding: 15px; /* Aumenta o tamanho vertical da barra */
+      margin-top: 20px; /* Espaço de 20px entre a barra e o botão */
+      text-align: center; /* Alinha o texto ao centro */
+      border-radius: 5px; /* Bordas arredondadas */
+      font-size: 16px; /* Aumenta o tamanho da fonte */
+      font-weight: bold; /* Deixa o texto em negrito */
+    }
+
+
+      /* Estilo do spinner */
+    .spinner {
+      border: 4px solid #f3f3f3; /* Cor de fundo */
+      border-top: 4px solid #3498db; /* Cor do spinner */
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 2s linear infinite; /* Animação para girar */
+      margin: 0 auto; /* Alinha o spinner no centro */
+    }
+
+    /* Animação de giro do spinner */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+        /* Estilo para a mensagem de "Enviando..." */
+    #loading-indicator {
+      margin-top: 15px;
+      display: none; /* Inicialmente invisível */
+      font-size: 18px; /* Aumenta o tamanho da fonte */
+      font-weight: bold; /* Deixa o texto em negrito */
+      color: #007bff; /* Cor azul para o texto */
+      text-align: center; /* Alinha o texto ao centro */
+      animation: blink 1.5s infinite; /* Animação de piscar */
+    }
+
+    /* Animação de piscar */
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+
   
 
 /* Responsividade */
@@ -400,6 +453,9 @@
       margin: 0 auto; /* Garante que o título esteja centralizado */
       width: 80%; /* Restringe a largura do título */
   }
+  .hero p {
+    font-size:15px ;
+  }
 }
 
 @media (max-width: 480px) {
@@ -430,6 +486,10 @@
       text-align: center; /* Garante que o título continue centralizado */
       margin: 0 auto; /* Garante o centralamento */
       width: 90%; /* Largura maior em telas pequenas */
+  }
+
+  .hero p {
+    font-size:15px ;
   }
 
   .cta-button {
