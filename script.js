@@ -2,7 +2,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault(); // Previne o envio padrão do formulário
 
   const formData = new FormData(this); // Coleta os dados do formulário
-  
+
   // Exibe a mensagem de "Enviando..." antes de enviar
   const loadingIndicator = document.getElementById('loading-indicator');
   loadingIndicator.style.display = 'block'; // Torna a mensagem visível
@@ -14,21 +14,20 @@ document.querySelector('form').addEventListener('submit', function(event) {
   })
   .then(response => response.json()) // Converte a resposta para JSON
   .then(data => {
+    const successBar = document.getElementById('success-bar');
+
     if (data.result === 'Success') {
       // Após o envio bem-sucedido, resetamos o formulário
       this.reset(); // Reseta o formulário
 
       // Exibe a barra de sucesso
-      const successBar = document.getElementById('success-bar');
       successBar.style.display = 'block'; // Torna a barra visível
       successBar.style.backgroundColor = '#d4edda'; // Fundo verde claro
       successBar.style.color = '#155724'; // Texto verde escuro
       successBar.textContent = "Mensagem enviada com sucesso! Entraremos em contacto em breve."; // Mensagem de sucesso
 
       // Esconde a barra de sucesso após 5 segundos
-      setTimeout(() => {
-        successBar.style.display = 'none';
-      }, 5000);
+      setTimeout(() => successBar.style.display = 'none', 5000);
     } else {
       // Caso não seja sucesso, exibe um erro
       alert('Houve um erro ao enviar sua mensagem. Tente novamente.');
