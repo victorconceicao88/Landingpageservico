@@ -25,6 +25,11 @@
     gtag('js', new Date());
     gtag('config', 'G-8X9532P4PK');
   </script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+
 </head>
 
 <!-- Nav bar começo -->
@@ -57,172 +62,202 @@
 </header>
  <!-- Nav bar Fim-->
 
-  <!-- Seção Inicial (Hero) -->
-  <section id="home" class="hero">
+
+<!-- Seção Inicial (Hero) -->
+<section id="home" class="hero">
     <h1>Desenvolvimento Web de Alta Performance</h1>
     <p>Transforme as suas ideias em soluções digitais inovadoras.</p>
     <a href="#contact" class="cta-button">Solicite um Orçamento</a>
-  </section>
-
- <!-- Seção de Serviços -->
-<section id="services" class="services">
-  <h2>Soluções de Desenvolvimento a Preços Acessíveis</h2>
-  <p class="services-description" id="short-text">
-    Oferecemos serviços de extrema qualidade a preços acessíveis, especialmente para quem está começando...
-  </p>
-  <button class="btn" id="loadMore" style="display: none;">Leia mais</button>
-  
 </section>
 
+<!-- Seção de Serviços -->
+<section id="services" class="services">
+    <h2>Soluções de Desenvolvimento a Preços Acessíveis</h2>
+    <p class="services-description" id="short-text">
+        Oferecemos serviços de extrema qualidade a preços acessíveis, especialmente para quem está começando...
+    </p>
+    <button class="btn" id="loadMore" style="display: none;">Leia mais</button>
+</section>
 
 <!-- Seção de Benefícios -->
 <section id="benefits" class="benefits">
-  <h2>Os Nossos Serviços</h2>
-  <div class="benefit">
-    <div class="benefit-item">
-      <h3>Agendamento Online Simples</h3>
-      <p>"Ofereça aos seus clientes a possibilidade de agendar serviços diretamente no seu site, de forma simples e eficiente. Ideal para qualquer tipo de negócio que necessite de agendamentos, como restaurantes, salões de beleza, barbearias, consultórios e muitos outros."
-      </p>
+    <h2>Os Nossos Serviços</h2>
+    <div class="benefit">
+        <div class="benefit-item">
+            <h3>Agendamento Online Simples</h3>
+            <p>"Ofereça aos seus clientes a possibilidade de agendar serviços diretamente no seu site, de forma simples e eficiente. Ideal para qualquer tipo de negócio que necessite de agendamentos, como restaurantes, salões de beleza, barbearias, consultórios e muitos outros."</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Montras Digitais</h3>
+            <p>"Criamos montras digitais e landing pages personalizadas para promover os seus produtos e serviços, ajudando a atrair mais clientes e a expandir o seu negócio. Perfeito para uma vasta gama de estabelecimentos, como restaurantes, padarias, lojas, consultórios e muitos outros."</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Automatização de Encomendas</h3>
+            <p>"Perfeito para pequenos negócios, como padarias, confeitarias, restaurantes, cafés e outros estabelecimentos que ainda registam os pedidos de forma manual. Com o nosso sistema de encomendas online, os pedidos são automaticamente registados numa folha de cálculo."</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Cardápios e Menus Online</h3>
+            <p>"Desenvolvemos cardápios digitais e menus online acessíveis através de QR Codes, permitindo que os seus clientes consultem facilmente os produtos e preços diretamente no seu dispositivo móvel."</p>
+        </div>
     </div>
-    <div class="benefit-item">
-      <h3>Montras Digitais</h3>
-      <p>"Criamos montras digitais e landing pages personalizadas para promover os seus produtos e serviços, ajudando a atrair mais clientes e a expandir o seu negócio. Perfeito para uma vasta gama de estabelecimentos, como restaurantes, padarias, lojas, consultórios e muitos outros, que desejam aumentar a sua visibilidade e destacar os seus produtos de forma eficaz e impactante."</p>
-    </div>
-    <div class="benefit-item">
-      <h3>Automatização de Encomendas</h3>
-      <p>"Perfeito para pequenos negócios, como padarias, confeitarias, restaurantes, cafés e outros estabelecimentos que ainda registam os pedidos de forma manual. Com o nosso sistema de encomendas online, os pedidos são automaticamente registados numa folha de cálculo, melhorando a organização, reduzindo erros e aumentando a produtividade do seu negócio."</p>
-    </div>
-    <div class="benefit-item">
-      <h3>Cardápios e Menus Online</h3>
-      <p>"Desenvolvemos cardápios digitais e menus online acessíveis através de QR Codes, permitindo que os seus clientes consultem facilmente os produtos e preços diretamente no seu dispositivo móvel. Ideal para restaurantes, cafés e outros estabelecimentos que procuram oferecer uma experiência sem contacto, promovendo um atendimento mais rápido, moderno e seguro. A solução perfeita para melhorar a experiência do cliente e a eficiência do serviço."</p>
-    </div>
-  </div>
 </section>
 
-
-  <!-- Seção de Depoimentos -->
-  <section id="testimonials" class="testimonials">
+<!-- Seção de Depoimentos -->
+<section id="testimonials" class="testimonials">
     <h2>O que os nossos clientes dizem</h2>
     <div class="testimonial-container">
-      <div class="testimonial-item">
-        <div class="testimonial-header">
-          <i class="fa-brands fa-google google-logo"></i>
-          <div class="stars">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-          </div>
+        <div class="testimonial-item">
+            <div class="testimonial-header">
+                <i class="fa-brands fa-google google-logo"></i>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </div>
+            <p>"Excelente empresa! O trabalho de desenvolvimento foi rápido e de alta qualidade. O site ficou perfeito e atendeu todas as minhas expectativas."</p>
+            <cite>- João Silva, Restaurante GiGi - Sagres </cite>
         </div>
-        <p>"Excelente empresa! O trabalho de desenvolvimento foi rápido e de alta qualidade. O site ficou perfeito e atendeu todas as minhas expectativas."</p>
-        <cite>- João Silva, Restaurante GiGi - Sagres </cite>
-      </div>
-
-      <div class="testimonial-item">
-        <div class="testimonial-header">
-          <i class="fa-brands fa-google google-logo"></i>
-          <div class="stars">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-          </div>
+        <div class="testimonial-item">
+            <div class="testimonial-header">
+                <i class="fa-brands fa-google google-logo"></i>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </div>
+            <p>"A equipa da DC Web Design foi incrível! Criaram um site funcional e bonito. Recomendo a todos que buscam qualidade e agilidade."</p>
+            <cite>- Lucia Duarte, L decor - Mem martins</cite>
         </div>
-        <p>"A equipa da DC Web Design foi incrível! Criaram um site funcional e bonito. Recomendo a todos que buscam qualidade e agilidade."</p>
-        <cite>- Lucia Duarte, L decor - Mem martins</cite>
-      </div>
-
-      <div class="testimonial-item">
-        <div class="testimonial-header">
-          <i class="fa-brands fa-google google-logo"></i>
-          <div class="stars">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-          </div>
+        <div class="testimonial-item">
+            <div class="testimonial-header">
+                <i class="fa-brands fa-google google-logo"></i>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </div>
+            <p>"Fiquei impressionado com o atendimento e a qualidade do trabalho. O site ficou ótimo, e a comunicação com a equipa foi excelente."</p>
+            <cite>- Pedro Costa, João dos frangos </cite>
         </div>
-        <p>"Fiquei impressionado com o atendimento e a qualidade do trabalho. O site ficou ótimo, e a comunicação com a equipa foi excelente."</p>
-        <cite>- Pedro Costa, João dos frangos </cite>
-      </div>
     </div>
-  </section>
-   <!-- Final Depoimentos  -->
+</section>
 
-   
-  <!-- Seção de Contato -->
-  <section id="contact" class="contact">
+<!-- Seção de Contato -->
+<section id="contact" class="contact">
     <h2>Entre em Contacto</h2>
-    <form method="post" action="https://script.google.com/macros/s/AKfycbzCE3sp75VsjQA2GK4HMgRAbSwWG4p6JVEypuHHOBKPwkZsQb12kg5NOGZtNezp4741QA/exec">
-      <div class="form-group">
-        <label for="name">O seu Nome</label>
-        <input type="text" id="name" name="name" placeholder="Digite o seu nome" required>
-      </div>
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">O seu Nome</label>
+            <input type="text" id="name" name="name" placeholder="Digite o seu nome" required>
+        </div>
 
-      <div class="form-group">
-        <label for="email">O seu E-mail</label>
-        <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
-      </div>
+        <div class="form-group">
+            <label for="email">O seu E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+        </div>
 
-      <div class="form-group">
-        <label for="business-type">Selecione o Tipo de Negócio/Estabelecimento</label>
-        <select id="business-type" name="business-type" required>
-            <option value="">Selecione o tipo de negócio</option>
-            <option value="restaurante">Restaurante</option>
-            <option value="churrasqueira">Churrasqueira</option>
-            <option value="loja">Loja</option>
-            <option value="barbearia">Barbearia</option>
-            <option value="salao-beleza">Salão de Beleza</option>
-            <option value="consultorio">Consultório</option>
-            <option value="servicos">Serviços</option>
-            <option value="outro">Outro</option>
-        </select>
-    </div>
-    
-    
+        <div class="form-group">
+            <label for="business-type">Selecione o Tipo de Negócio/Estabelecimento</label>
+            <select id="business-type" name="business-type" required>
+                <option value="">Selecione o tipo de negócio</option>
+                <option value="restaurante">Restaurante</option>
+                <option value="churrasqueira">Churrasqueira</option>
+                <option value="loja">Loja</option>
+                <option value="barbearia">Barbearia</option>
+                <option value="salao-beleza">Salão de Beleza</option>
+                <option value="consultorio">Consultório</option>
+                <option value="servicos">Serviços</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
 
-    <div class="form-group">
-      <label for="message">Descrição do Projeto</label>
-      <textarea id="message" name="message" placeholder="Descreva o seu negócio e as suas necessidades." rows="6" required></textarea>
-    </div>
-  
+        <div class="form-group">
+            <label for="message">Descrição do Projeto</label>
+            <textarea id="message" name="message" placeholder="Descreva o seu negócio e as suas necessidades." rows="6" required></textarea>
+        </div>
 
-      <button type="submit" class="submit-btn">Enviar Mensagem</button>
+        <button type="submit" class="submit-btn">Enviar Mensagem</button>
     </form>
 
-        <!-- Indicador de Carregamento (spinner) -->
-       <!-- Mensagem de carregamento "Enviando..." -->
-      <div id="loading-indicator" style="display:none;">Enviando...</div>
+    <!-- Indicador de Carregamento (spinner) -->
+    <div id="loading-indicator" style="display:none;">Enviando...</div>
 
-      <!-- Barra de Sucesso -->
-      <div id="success-bar" style="display:none;"></div>
-  
-  </section>
+    <!-- Barra de Sucesso -->
+    <div id="success-bar" style="display:none;"></div>
+</section>
 
-  <!-- Rodapé -->
-  <footer>
+<!-- Rodapé -->
+<footer>
     <p>&copy; 2025 WebProSolutions | Todos os direitos reservados.</p>
-  </footer>
+</footer>
 
-  <script>
-    // Antes de enviar, codificar as quebras de linha
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-      var message = document.getElementById("message").value;
-      // Substituir as quebras de linha por %0A (representação de nova linha)
-      message = message.replace(/\n/g, "%0A");
-      // Atualiza o valor do campo "message" com as quebras de linha codificadas
-      document.getElementById("message").value = message;
+<!-- Firebase Initialization -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+
+  // 1. Configuração do Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyBmzIj9n8_10ho_OwCsSqZlrAOezkGVt-c",
+    authDomain: "dados-dos-clientes-344c4.firebaseapp.com",
+    projectId: "dados-dos-clientes-344c4",
+    storageBucket: "dados-dos-clientes-344c4.appspot.com",
+    messagingSenderId: "566327698246",
+    appId: "1:566327698246:web:dcd305891a8ff14f1bfb47"
+  };
+
+  // 2. Inicializa o Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app); // Inicializa o Firestore
+  const auth = getAuth(app); // Inicializa a autenticação (caso precise)
+
+  // 3. Adicionando um listener ao evento de submit do formulário
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // 4. Coleta os valores do formulário
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const businessType = document.getElementById('business-type').value;
+    const message = document.getElementById('message').value;
+
+    // 5. Mostrar o indicador de carregamento
+    document.getElementById('loading-indicator').style.display = 'block';
+
+    // 6. Salvar no Firestore
+    addDoc(collection(db, "contatos"), {
+      name: name,
+      email: email,
+      businessType: businessType,
+      message: message,
+      timestamp: serverTimestamp() // Marcar a data/hora da inserção
+    })
+
+    .catch(function(error) {
+      // 9. Caso de erro - mostrar erro
+      document.getElementById('loading-indicator').style.display = 'none';
+      document.getElementById('success-bar').innerText = 'Erro ao enviar a mensagem.';
+      document.getElementById('success-bar').style.display = 'block';
+      console.error("Erro ao enviar mensagem: ", error);
     });
-  </script>
+  });
+</script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
- <!-- Link para o arquivo JavaScript -->
-  <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebProSolutions - Desenvolvimento Web e Soluções Digitais</title>
+  <!-- CSS e Links (como já estão no seu código) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Formulário de Contato -->
+  <section id="contact" class="contact">
+    <h2>Entre em Contacto</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">O seu Nome</label>
+        <input type="text" id="name" name="name" placeholder="Digite o seu nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">O seu E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="business-type">Selecione o Tipo de Negócio/Estabelecimento</label>
+        <select id="business-type" name="business-type" required>
+          <option value="">Selecione o tipo de negócio</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="churrasqueira">Churrasqueira</option>
+          <option value="loja">Loja</option>
+          <option value="barbearia">Barbearia</option>
+          <option value="salao-beleza">Salão de Beleza</option>
+          <option value="consultorio">Consultório</option>
+          <option value="servicos">Serviços</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Descrição do Projeto</label>
+        <textarea id="message" name="message" placeholder="Descreva o seu negócio e as suas necessidades." rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Mensagem</button>
+    </form>
+
+    <div id="loading-indicator" style="display:none;">Enviando...</div>
+    <div id="success-bar" style="display:none;"></div>
+  </section>
+
+  <!-- Firebase Initialization -->
+  <script>
+    // Configuração do Firebase (substitua pelos seus próprios dados)
+    var firebaseConfig = {
+        apiKey: "AIzaSyBmzIj9n8_10ho_OwCsSqZlrAOezkGVt-c",
+        authDomain: "dados-dos-clientes-344c4.firebaseapp.com",
+        projectId: "dados-dos-clientes-344c4",
+        storageBucket: "dados-dos-clientes-344c4.firebasestorage.app",
+        messagingSenderId: "566327698246",
+        appId: "1:566327698246:web:dcd305891a8ff14f1bfb47"
+    };
+    // Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+
+    // Evento para enviar o formulário
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var businessType = document.getElementById('business-type').value;
+      var message = document.getElementById('message').value;
+
+      // Mostrar o indicador de carregamento
+      document.getElementById('loading-indicator').style.display = 'block';
+
+      // Salvar no Firestore
+      db.collection("contatos").add({
+        name: name,
+        email: email,
+        businessType: businessType,
+        message: message,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      })
+      .then(function() {
+        // Sucesso - mostrar a barra de sucesso
+        document.getElementById('loading-indicator').style.display = 'none';
+        document.getElementById('success-bar').innerText = 'Mensagem enviada com sucesso!';
+        document.getElementById('success-bar').style.display = 'block';
+
+        // Limpar o formulário
+        document.getElementById('contact-form').reset();
+      })
+      .catch(function(error) {
+        // Em caso de erro - mostrar erro
+        document.getElementById('loading-indicator').style.display = 'none';
+        document.getElementById('success-bar').innerText = 'Erro ao enviar a mensagem.';
+        document.getElementById('success-bar').style.display = 'block';
+        console.error("Erro ao enviar mensagem: ", error);
+      });
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
