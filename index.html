@@ -3,23 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Meta Tags para SEO -->
   <meta name="description" content="WebProSolutions oferece soluções de desenvolvimento web de alta qualidade a preços acessíveis. Criamos sites, lojas virtuais e sistemas personalizados para empresas de todos os tamanhos.">
-  
+  <!-- Meta Tags para Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="oiHezDW8J5O2YfNLtVpYyGHOfJ0ZFg8FbBPBe4NESNU" />
-
   <!-- Título da Página -->
   <title>WebProSolutions - Desenvolvimento Web e Soluções Digitais</title>
-
   <!-- Link para o CSS -->
   <link rel="stylesheet" href="style.css">
-
   <!-- Font Awesome (para os ícones) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X9532P4PK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -29,20 +25,36 @@
     gtag('config', 'G-8X9532P4PK');
   </script>
 </head>
-<body>
 
-  <!-- Cabeçalho -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#benefits">Vantagens</a></li>
-        <li><a href="#testimonials">Feedback</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
+<!-- Nav bar começo -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#benefits">Vantagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testemunhos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-  </header>
+</header>
+ <!-- Nav bar Fim-->
 
   <!-- Seção Inicial (Hero) -->
   <section id="home" class="hero">
@@ -51,30 +63,36 @@
     <a href="#contact" class="cta-button">Solicite um Orçamento</a>
   </section>
 
-  <!-- Seção de Serviços -->
-  <section id="services" class="services"> 
-    <h2>Soluções de Desenvolvimento a Preços Acessíveis</h2>
-    <p class="services-description">Oferecemos todos estes serviços com qualidade excecional e preços acessíveis, para ajudar o seu negócio a crescer e a destacar-se no mercado.</p>
-  </section>
+ <!-- Seção de Serviços -->
+<section id="services" class="services">
+  <h2>Soluções de Desenvolvimento a Preços Acessíveis</h2>
+  <p class="services-description">Oferecemos serviços de extrema qualidade a preços acessíveis, especialmente para quem está a começar e deseja colocar o seu negócio nas alturas. Utilizamos técnicas avançadas para melhorar a visibilidade online do seu negócio, garantindo que mais pessoas encontrem os seus produtos ou serviços quando procuram na internet. Ajudamos o seu negócio a crescer e a destacar-se no mercado, sem grandes investimentos.</p>
+</section>
 
-  <!-- Seção de Benefícios -->
-  <section id="benefits" class="benefits">
-    <h2>Os Nossos Serviços</h2>
-    <div class="benefit">
-      <div class="benefit-item">
-        <h3>Agendamento Online Simples</h3>
-        <p>"Ofereça aos seus clientes a possibilidade de agendar serviços diretamente no seu site. Ideal para restaurantes, salões de beleza e outros negócios."</p>
-      </div>
-      <div class="benefit-item">
-        <h3>Montras Digitais</h3>
-        <p>"Criamos montras digitais e landing pages para divulgar os seus produtos e serviços. Perfeito para restaurantes, churrasqueiras, padarias e outros negócios que desejam exibir os seus produtos e facilitar a realização de pedidos online."</p>
-      </div>
-      <div class="benefit-item">
-        <h3>Automatização de Encomendas</h3>
-        <p>"Ideal para padarias, confeiteiros e negócios que ainda anotam pedidos manualmente. Com o nosso sistema de encomendas online, os pedidos são registados automaticamente numa folha de cálculo, melhorando a organização e a produtividade do seu negócio."</p>
-      </div>
+
+<!-- Seção de Benefícios -->
+<section id="benefits" class="benefits">
+  <h2>Os Nossos Serviços</h2>
+  <div class="benefit">
+    <div class="benefit-item">
+      <h3>Agendamento Online Simples</h3>
+      <p>"Ofereça aos seus clientes a possibilidade de agendar serviços diretamente no seu site, de forma prática e eficiente. Ideal para qualquer tipo de negócio que necessite de agendamentos, como restaurantes, salões de beleza, barbearias, consultórios e muito mais."</p>
     </div>
-  </section>
+    <div class="benefit-item">
+      <h3>Montras Digitais</h3>
+      <p>"Criamos montras digitais e landing pages personalizadas para promover os seus produtos e serviços, ajudando a atrair mais clientes e a expandir o seu negócio. Perfeito para uma ampla gama de negócios, como restaurantes, padarias, lojas, consultórios e muitos outros, que desejam aumentar a sua visibilidade e destacar os seus produtos de forma impactante."</p>
+    </div>
+    <div class="benefit-item">
+      <h3>Automatização de Encomendas</h3>
+      <p>"Ideal para pequenos negócios, como padarias, confeitarias, restaurantes, cafés e outros estabelecimentos que ainda registam os pedidos de forma manual. Com o nosso sistema de encomendas online, os pedidos são registados automaticamente numa folha de cálculo, melhorando a organização e a produtividade do seu negócio."</p>
+    </div>
+    <div class="benefit-item">
+      <h3>Cardápios e Menus Online</h3>
+      <p>"Criamos cardápios digitais e menus online que os seus clientes podem aceder facilmente através de QR Codes. Ideal para restaurantes, cafés, e outros estabelecimentos que desejam oferecer uma experiência sem contacto, facilitando a consulta de produtos e preços diretamente no seu dispositivo móvel. A solução perfeita para um atendimento mais rápido e moderno."</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Seção de Depoimentos -->
   <section id="testimonials" class="testimonials">
@@ -107,7 +125,7 @@
           </div>
         </div>
         <p>"A equipa da DC Web Design foi incrível! Criaram um site funcional e bonito. Recomendo a todos que buscam qualidade e agilidade."</p>
-        <cite>- Maria Oliveira, Salão de Beleza Y</cite>
+        <cite>- Lucia Duarte, L decor - Mem martins</cite>
       </div>
 
       <div class="testimonial-item">
@@ -122,11 +140,13 @@
           </div>
         </div>
         <p>"Fiquei impressionado com o atendimento e a qualidade do trabalho. O site ficou ótimo, e a comunicação com a equipa foi excelente."</p>
-        <cite>- Pedro Costa, Churrasqueira Z</cite>
+        <cite>- Pedro Costa, João dos frangos </cite>
       </div>
     </div>
   </section>
+   <!-- Final Depoimentos  -->
 
+   
   <!-- Seção de Contato -->
   <section id="contact" class="contact">
     <h2>Entre em Contacto</h2>
@@ -142,22 +162,27 @@
       </div>
 
       <div class="form-group">
-        <label for="business-type">Tipo de Negócio</label>
+        <label for="business-type">Selecione o Tipo de Negócio/Estabelecimento</label>
         <select id="business-type" name="business-type" required>
-          <option value="">Selecione o tipo de negócio</option>
-          <option value="restaurante">Restaurante</option>
-          <option value="salao-beleza">Salão de Beleza</option>
-          <option value="churrasqueira">Churrasqueira</option>
-          <option value="loja">Loja</option>
-          <option value="servicos">Serviços</option>
-          <option value="outro">Outro</option>
+            <option value="">Selecione o tipo de negócio</option>
+            <option value="restaurante">Restaurante</option>
+            <option value="churrasqueira">Churrasqueira</option>
+            <option value="loja">Loja</option>
+            <option value="barbearia">Barbearia</option>
+            <option value="salao-beleza">Salão de Beleza</option>
+            <option value="consultorio">Consultório</option>
+            <option value="servicos">Serviços</option>
+            <option value="outro">Outro</option>
         </select>
-      </div>
+    </div>
+    
+    
 
-      <div class="form-group">
-        <label for="message">O seu Briefing</label>
-        <textarea id="message" name="message" placeholder="Descreva um pouco sobre o seu negócio e as suas necessidades..." rows="6" required></textarea>
-      </div>
+    <div class="form-group">
+      <label for="message">Descrição do Projeto</label>
+      <textarea id="message" name="message" placeholder="Descreva o seu negócio e as suas necessidades." rows="6" required></textarea>
+    </div>
+  
 
       <button type="submit" class="submit-btn">Enviar Mensagem</button>
     </form>
@@ -186,9 +211,12 @@
       document.getElementById("message").value = message;
     });
   </script>
-  
 
-  <!-- Link para o arquivo JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <!-- Link para o arquivo JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
