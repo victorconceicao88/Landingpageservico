@@ -176,6 +176,18 @@
     <p>&copy; 2025 WebProSolutions | Todos os direitos reservados.</p>
   </footer>
 
+  <script>
+    // Antes de enviar, codificar as quebras de linha
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      var message = document.getElementById("message").value;
+      // Substituir as quebras de linha por %0A (representação de nova linha)
+      message = message.replace(/\n/g, "%0A");
+      // Atualiza o valor do campo "message" com as quebras de linha codificadas
+      document.getElementById("message").value = message;
+    });
+  </script>
+  
+
   <!-- Link para o arquivo JavaScript -->
   <script src="script.js"></script>
 </body>
