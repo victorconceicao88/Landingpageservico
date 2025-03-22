@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
           successBar.style.display = 'block'; // Torna a barra visível
           successBar.style.backgroundColor = '#d4edda'; // Fundo verde claro
           successBar.style.color = '#155724'; // Texto verde escuro
-          successBar.textContent = "Mensagem enviada com sucesso! Entraremos em contacto em breve."; // Mensagem de sucesso
+          successBar.textContent = "Your message has been successfully sent! We will get in touch with you shortly."; // Mensagem de sucesso
   
           // Esconde a barra de sucesso após 5 segundos
           setTimeout(() => successBar.style.display = 'none', 5000);
