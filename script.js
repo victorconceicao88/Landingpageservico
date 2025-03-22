@@ -92,3 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(titleElement);
 });
 
+function changeLanguage(event) {
+  const language = event.target.value;
+  if(language === 'en') {
+    window.location.href = 'indexen.html'; // Redireciona para a página em inglês
+  } else {
+    window.location.href = 'index.html'; // Redireciona para a página em português
+  }
+}
+

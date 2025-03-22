@@ -25,6 +25,36 @@
     align-items: center; /* Alinha os itens no centro verticalmente */
   }
   
+  /* Estilos para o seletor de idiomas */
+  .language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .language-selector select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .language-selector select:hover {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+  }
+  
+  .language-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
   /* Estilos para a Navbar */
   .navbar {
     background-color: #2E3A59; /* Cor de fundo */
@@ -508,6 +538,16 @@
         width: 90%; /* Ocupa a maior parte da largura da tela */
         max-width: 400px; /* Mantém um tamanho máximo */
       }
+  
+      .language-selector {
+        top: 10px; /* Ajuste a posição vertical */
+        right: 10px; /* Ajuste a posição horizontal */
+    }
+  
+    .language-selector select {
+        padding: 6px 10px; /* Reduz o padding para telas menores */
+        font-size: 12px; /* Reduz o tamanho da fonte */
+    }
   }
   
   /* Ajustes para telas muito pequenas (até 480px) */

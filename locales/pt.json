@@ -1,0 +1,25 @@
+{
+    "home": {
+      "title": "Desenvolvimento Web de Alta Performance",
+      "subtitle": "Transforme as suas ideias em soluções digitais inovadoras.",
+      "cta": "Solicite um Orçamento"
+    },
+    "services": {
+      "title": "Soluções de Desenvolvimento a Preços Acessíveis",
+      "description": "Oferecemos serviços de extrema qualidade a preços acessíveis, especialmente para quem está começando..."
+    },
+    "benefits": {
+      "title": "Os Nossos Serviços"
+    },
+    "contact": {
+      "title": "Entre em Contacto",
+      "form": {
+        "name": "O seu Nome",
+        "email": "O seu E-mail",
+        "businessType": "Selecione o Tipo de Negócio/Estabelecimento",
+        "message": "Descrição do Projeto"
+      },
+      "submit": "Enviar Mensagem"
+    }
+  }
+  

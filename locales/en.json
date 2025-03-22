@@ -1,0 +1,25 @@
+{
+    "home": {
+      "title": "High-Performance Web Development",
+      "subtitle": "Turn your ideas into innovative digital solutions.",
+      "cta": "Request a Quote"
+    },
+    "services": {
+      "title": "Affordable Development Solutions",
+      "description": "We offer high-quality services at affordable prices, especially for those just starting out..."
+    },
+    "benefits": {
+      "title": "Our Services"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "form": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "businessType": "Select Business Type/Establishment",
+        "message": "Project Description"
+      },
+      "submit": "Send Message"
+    }
+  }
+  
