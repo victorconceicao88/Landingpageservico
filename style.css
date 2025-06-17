@@ -1,0 +1,578 @@
+/* Cores principais */
+:root {
+  --azul-escuro: #2E3A59;
+  --laranja: #F2994A;
+  --cinza-claro: #F7F7F7;
+  --cinza-escuro: #333333;
+  --azul-suave: #1C3B72;
+}
+
+/* Estilos básicos */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cinza-claro); /* Fundo cinza claro */
+  color: var(--cinza-escuro); /* Texto principal */
+}
+
+header {
+  background-color: var(--azul-escuro); /* Cor de fundo do cabeçalho */
+  padding: 20px 0; /* Espaçamento do cabeçalho */
+  position: relative; /* Para controle do posicionamento do logo */
+  display: flex; /* Flexbox para o alinhamento */
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+/* Estilos para o seletor de idiomas */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-selector select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.language-selector select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para a Navbar */
+.navbar {
+  background-color: #2E3A59; /* Cor de fundo */
+  padding: 10px 20px;
+}
+
+/* Ajuste para deixar os itens centralizados em telas menores */
+.navbar-collapse {
+  text-align: center;
+}
+
+/* Ajusta os links */
+.navbar-nav {
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+/* Estilização dos links */
+.nav-link {
+  color: #ffffff !important; 
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.nav-link:hover {
+  color: #ffa500 !important; /* Um tom de laranja mais moderno */
+}
+
+/* Ajuste do botão hambúrguer */
+.navbar-toggler {
+  border: 2px solid #ffffff; 
+  padding: 5px 8px;
+}
+
+/* Ícone do botão hambúrguer */
+.navbar-light .navbar-toggler-icon {
+  filter: invert(1); /* Deixa o ícone branco */
+}
+
+/* Ajuste no espaçamento entre itens */
+.navbar-nav .nav-item {
+  margin: 10px 15px; 
+}
+
+  
+/* Seção Hero */
+.hero {
+  background-color: var(--azul-escuro); /* Azul escuro */
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 28px;
+}
+  
+.hero p {
+  font-size: 15px;
+  margin-bottom: 30px; /* Adiciona espaçamento entre o parágrafo e o botão */
+}
+
+.cta-button {
+  background-color: #FFD700; /* Cor dourada para se destacar no fundo escuro */
+  color: #1c1c1c; /* Cor de texto escura para garantir contraste e legibilidade */
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra para destacar */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transições suaves */
+}
+
+.cta-button:hover {
+  background-color: #FFC107; /* Cor um pouco mais clara para o efeito de hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+
+
+  
+/* Descrição dos Serviços */
+.services-description {
+  color: #f8f8f8;  /* Cor de texto mais clara para melhorar o contraste */
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* Botão CTA */
+.cta-button {
+  padding: 10px 20px;
+  background-color: var(--laranja); /* Laranja */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Seção Serviços */
+#services {
+background-color: #f8f8f8; /* Cor de fundo suave para destacar a seção */
+padding: 60px 20px; /* Padding para espaçar bem o conteúdo */
+text-align: center; /* Alinha o conteúdo centralizado */
+font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+color: #333; /* Cor do texto principal */
+}
+
+#services h2 {
+font-size: 32px; /* Tamanho grande para o título */
+font-weight: 700; /* Deixa o título mais forte */
+color: #2c3e50; /* Cor do título */
+margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+#services .services-description {
+font-size: 18px; /* Tamanho do texto */
+color: #7f8c8d; /* Cor mais suave para o texto */
+line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade */
+max-width: 800px; /* Largura máxima para manter o texto não muito largo */
+margin: 0 auto 30px; /* Centraliza e coloca espaçamento embaixo */
+}
+
+#services .services-description a {
+color: #e67e22; /* Cor laranja para links */
+font-weight: bold;
+text-decoration: none;
+}
+
+#services .services-description a:hover {
+text-decoration: underline; /* Deixa o link sublinhado quando o mouse passa */
+}
+
+
+/* Seção Benefícios */
+#benefits {
+background-color: #ecf0f1; /* Cor de fundo suave para a seção de benefícios */
+padding: 60px 20px; /* Padding para espaçar bem o conteúdo */
+text-align: center; /* Alinha o conteúdo ao centro */
+font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+color: #333; /* Cor do texto principal */
+}
+
+#benefits h2 {
+font-size: 32px; /* Tamanho grande para o título */
+font-weight: 700; /* Título mais forte */
+color: #2c3e50; /* Cor do título em azul escuro */
+margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+
+#benefits .benefit {
+display: flex; /* Utiliza flexbox para alinhar os itens lado a lado */
+justify-content: center; /* Centraliza os itens */
+gap: 30px; /* Espaçamento entre os itens */
+flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas em telas menores */
+}
+
+#benefits .benefit-item {
+background-color: #ffffff; /* Cor de fundo branca para cada item */
+border-radius: 10px; /* Bordas arredondadas para um visual mais moderno */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+padding: 30px; /* Espaçamento interno */
+width: 280px; /* Largura de cada item */
+text-align: left; /* Alinha o texto à esquerda dentro de cada item */
+transition: transform 0.3s, box-shadow 0.3s; /* Animações para interação */
+}
+
+/* Estilo para os títulos dos benefícios */
+.benefit-item h3 {
+font-family: 'Roboto', sans-serif; /* Usando a fonte Roboto */
+font-weight: 600; /* Peso mais forte para destaque */
+font-size: 1.6rem; /* Tamanho de fonte adequado */
+color: var(--cor-principal); /* Cor principal que combina com o restante do site */
+margin-bottom: 10px; /* Distância entre o título e o parágrafo */
+}
+
+
+#benefits .benefit-item p {
+font-size: 16px; /* Tamanho do texto */
+color: #7f8c8d; /* Cor suave para o texto */
+line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhorar a legibilidade */
+}
+
+#benefits .benefit-item:hover {
+transform: translateY(-10px); /* Dá um efeito de elevação ao passar o mouse */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para dar a sensação de elevação */
+}
+.testimonials {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--cor-principal);
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center; /* Centraliza os elementos */
+  gap: 20px; /* Espaçamento entre os depoimentos */
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+  align-items: stretch; /* Mantém todos os cards com a mesma altura */
+}
+
+.testimonial-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Ajusta automaticamente o tamanho mínimo e ideal */
+  max-width: 350px; /* Define um limite para os depoimentos */
+  text-align: left;
+  margin-bottom: 30px; /* Espaço entre os depoimentos */
+  display: flex;
+  flex-direction: column; /* Distribui o conteúdo corretamente */
+  justify-content: space-between; /* Ajusta o espaçamento interno */
+}
+
+.testimonial-item p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.testimonial-item cite {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 15px;
+}
+
+.google-logo {
+  font-size: 1.8rem; /* Ajustando o tamanho do ícone */
+  color: #4285f4; /* Cor do ícone do Google */
+  margin-right: 10px;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #ff5722; /* Cor das estrelas */
+}
+
+.star {
+  margin-right: 3px;
+}
+
+
+/* Formulário de Contato */
+.contact {
+  background-color: var(--cinza-claro); /* Cinza claro */
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--cinza-escuro); /* Cinza escuro */
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button.submit-btn {
+  background-color: var(--laranja); /* Laranja */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição para cor, transformação e sombra */
+}
+
+button.submit-btn:hover {
+  background-color: #e37b2e; /* Escurece o laranja */
+  transform: translateY(-3px); /* Levanta o botão */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para dar sensação de elevação */
+}
+
+
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+  border-color: var(--azul-suave); /* Azul suave no foco */
+  outline: none;
+}
+
+.form-group select {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--azul-escuro); /* Azul escuro */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+  /* Estilo para a barra de sucesso */
+  #success-bar {
+    display: none; /* Inicialmente invisível */
+    width: 100%; /* Barra de sucesso ocupa toda a largura */
+    padding: 15px; /* Aumenta o tamanho vertical da barra */
+    margin-top: 20px; /* Espaço de 20px entre a barra e o botão */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+
+
+    /* Estilo do spinner */
+  .spinner {
+    border: 4px solid #f3f3f3; /* Cor de fundo */
+    border-top: 4px solid #3498db; /* Cor do spinner */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite; /* Animação para girar */
+    margin: 0 auto; /* Alinha o spinner no centro */
+  }
+
+  /* Animação de giro do spinner */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+      /* Estilo para a mensagem de "Enviando..." */
+  #loading-indicator {
+    margin-top: 15px;
+    display: none; /* Inicialmente invisível */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #007bff; /* Cor azul para o texto */
+    text-align: center; /* Alinha o texto ao centro */
+    animation: blink 1.5s infinite; /* Animação de piscar */
+  }
+
+  /* Animação de piscar */
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+.testimonial-item {
+    width: 45%; /* Ocupa 45% da largura da tela em telas maiores, como tablets */
+}
+}
+/* Responsividade para tablets e telas menores */
+@media (max-width: 991px) {
+  /* Centraliza os itens da navbar */
+  .navbar-collapse {
+      text-align: center;
+  }
+
+  .navbar-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+      margin: 5px 0; /* Ajusta o espaçamento vertical */
+  }
+
+  /* Ajuste no botão hambúrguer */
+  .navbar-toggler {
+      border: 2px solid #ffffff;
+      padding: 8px;
+  }
+
+  .navbar-toggler-icon {
+      filter: invert(1);
+  }
+}
+
+/* Ajustes para telas menores (até 768px) */
+@media (max-width: 768px) {
+  /* Ajuste no tamanho dos botões e espaçamento */
+  .cta-button {
+      width: 100%;
+      max-width: 250px;
+  }
+
+  /* Ajusta o menu de navegação */
+  .navbar-nav {
+      gap: 10px;
+  }
+
+  .nav-link {
+      font-size: 14px; /* Reduz um pouco o tamanho da fonte */
+      padding: 8px 10px;
+  }
+
+  /* Ajusta o título da seção hero */
+  .hero h1 {
+      font-size: 28px;
+      width: 85%;
+  }
+
+  .hero p {
+      font-size: 14px;
+  }
+
+  .testimonial-container {
+      flex-direction: column; /* Empilha os depoimentos em telas menores */
+      align-items: center; /* Centraliza os depoimentos */
+    }
+  
+    .testimonial-item {
+      width: 90%; /* Ocupa a maior parte da largura da tela */
+      max-width: 400px; /* Mantém um tamanho máximo */
+    }
+
+    .language-selector {
+      top: 10px; /* Ajuste a posição vertical */
+      right: 10px; /* Ajuste a posição horizontal */
+  }
+
+  .language-selector select {
+      padding: 6px 10px; /* Reduz o padding para telas menores */
+      font-size: 12px; /* Reduz o tamanho da fonte */
+  }
+}
+
+/* Ajustes para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .navbar-nav {
+      gap: 5px;
+  }
+
+  .nav-link {
+      font-size: 14px;
+      padding: 6px;
+  }
+
+  /* Ajusta o título da seção hero */
+  .hero h1 {
+      margin-left: 15px;
+      font-size: 24px;
+      width: 90%;
+  }
+
+  .hero p {
+      font-size: 13px;
+  }
+
+  .cta-button {
+      width: 100%;
+  }
+}

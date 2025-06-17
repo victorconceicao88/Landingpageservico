@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebProSolutions offers high-quality web development solutions at affordable prices. We create websites, online stores, and custom systems for businesses of all sizes.">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X9532P4PK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8X9532P4PK');
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+  <title>WebProSolutions - Web Development & Digital Solutions</title>
+  <link rel="stylesheet" href="styleen.css">
+</head>
+<body>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <select id="language-dropdown" onchange="changeLanguage(event)">
+      <option value="pt">Português</option>
+      <option value="en" selected>English</option>
+    </select>
+  </div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>High-Performance Web Development</h1>
+    <p>Turn your ideas into innovative digital solutions.</p>
+    <a href="#contact" class="cta-button">Get a Quote</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Affordable Web Development Solutions</h2>
+    <p class="services-description" id="short-text">
+      We offer high-quality services at affordable prices, especially for those just starting...
+    </p>
+    <button class="btn" id="loadMore" style="display: none;">Learn More</button>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits">
+    <h2>Our Services</h2>
+    <div class="benefit">
+      <div class="benefit-item">
+        <h3>Online Booking Systems</h3>
+        <p>"Allow your customers to book services directly on your website in an intuitive and efficient way. The ideal solution for any business that needs bookings, such as restaurants, beauty salons, barbershops, clinics, and many others, providing a hassle-free experience for both customers and your team."</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Digital Showcases</h3>
+        <p>"We develop interactive digital showcases and custom landing pages optimized to highlight your products and services dynamically. The ideal solution to attract more customers and boost your business growth, whether for restaurants, stores, bakeries, clinics, or any other type of establishment."</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Order Automation</h3>
+        <p>"Perfect for small businesses like bakeries, confectionaries, restaurants, cafes, and other establishments still managing orders manually. With our online order system, orders are automatically registered and organized, eliminating errors and streamlining the process. The solution offers simplified and efficient management, allowing businesses to focus on what really matters: providing excellent service to their customers."</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Digital Menus</h3>
+        <p>"We develop interactive digital menus, accessible via QR Code, where customers can check products and prices directly on their mobile devices. Additionally, we offer the option for establishments to implement a complete order management system, allowing customers to place orders directly from their phones, simplifying the process and improving efficiency."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Clients Have to Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <i class="fa-brands fa-google google-logo"></i>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <p>"Excellent company! The development work was fast and of high quality. The site turned out perfect and met all my expectations."</p>
+        <cite>- João Silva, Restaurante A Tasca </cite>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <i class="fa-brands fa-google google-logo"></i>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <p>"The DC Web Design team was amazing! They created a functional and beautiful website. I recommend them to anyone looking for quality and speed."</p>
+        <cite>- Lúcia Duarte, L Decor </cite>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <i class="fa-brands fa-google google-logo"></i>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <p>"I was impressed with the service and quality of the work. The site turned out great, and communication with the team was excellent."</p>
+        <cite>- Pedro Costa, João dos Frangos</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="business-type">Select Your Business Type</label>
+        <select id="business-type" name="business-type" required>
+          <option value="">Select business type</option>
+          <option value="restaurant">Restaurant</option>
+          <option value="store">Stores</option>
+          <option value="barbershop">Barbershop</option>
+          <option value="beauty-salon">Beauty Salon</option>
+          <option value="clinic">Clinic</option>
+          <option value="services">Services</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Project Description</label>
+        <textarea id="message" name="message" placeholder="Describe your business and your needs." rows="6" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    <div id="loading-indicator" style="display:none;">Sending...</div>
+    <div id="success-bar" style="display:none;"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 WebProSolutions | All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase Initialization -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyBmzIj9n8_10ho_OwCsSqZlrAOezkGVt-c",
+      authDomain: "dados-dos-clientes-344c4.firebaseapp.com",
+      projectId: "dados-dos-clientes-344c4",
+      storageBucket: "dados-dos-clientes-344c4.appspot.com",
+      messagingSenderId: "566327698246",
+      appId: "1:566327698246:web:dcd305891a8ff14f1bfb47"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const businessType = document.getElementById('business-type').value;
+      const message = document.getElementById('message').value;
+      document.getElementById('loading-indicator').style.display = 'block';
+      addDoc(collection(db, "contacts"), {
+        name: name,
+        email: email,
+        businessType: businessType,
+        message: message,
+        timestamp: serverTimestamp()
+      })
+      .catch(function(error) {
+        document.getElementById('loading-indicator').style.display = 'none';
+        document.getElementById('success-bar').innerText = 'Error sending message.';
+        document.getElementById('success-bar').style.display = 'block';
+        console.error("Error sending message: ", error);
+      });
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripten.js"></script>
+</body>
+</html>
